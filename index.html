@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Font Changing Greeting</title>
+  <style>
+    /* Define fonts to be used */
+    .font1 {
+      font-family: Arial, sans-serif;
+    }
+    .font2 {
+      font-family: 'Times New Roman', serif;
+    }
+    .font3 {
+      font-family: 'Courier New', monospace;
+    }
+    /* Additional styling */
+    body {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div id="changingText">Hello! Welcome to the journey of Adarsh</div>
+
+  <script>
+    // Array of font classes
+    const fonts = ['font1', 'font2', 'font3'];
+    let currentFont = 0;
+
+    function changeFont() {
+      document.getElementById('changingText').className = fonts[currentFont];
+      currentFont = (currentFont + 1) % fonts.length;
+    }
+
+    // Change font every 2 seconds
+    setInterval(changeFont, 2000);
+  </script>
+</body>
+</html>
