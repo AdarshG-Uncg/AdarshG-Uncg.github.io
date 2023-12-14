@@ -40,6 +40,9 @@
 <body>
   <div id="changingText">Hello! Welcome to the journey of Adarsh</div>
 
+  <button class="redirect-button" onclick="enterToResume()">Go to Another Page</button>
+
+
   <script>
     // Array of font classes
     const fonts = ['font1', 'font2', 'font3', 'font4', 'font5', 'font6'];
@@ -52,6 +55,9 @@
 
     // Change font every 2 seconds
     setInterval(changeFont, 2000);
+
+    function enterToResume() {
+      window.location.assign('another_page.html');
   </script>
 </body>
 </html>
