@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .expandable .content {
+        display: none; 
+        }
+        .expandable {
+        display: flex;
+        align-items: flex-start;
+        }
+
+        .expandable-content {
+        flex: 1; 
+        }
+
+        .toggle-btn {
+        margin-right: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="expandable">
+
+        <button class="toggle-btn">+</button>
+      
+        <div class="expandable-content">
+      
+          <div class="title">Section Title</div>
+      
+          <div class="content">
+            The hidden content is here.
+          </div>
+      
+        </div>
+      
+      </div>
+</body>
+<script>
+    const toggleBtns = document.querySelectorAll(".toggle-btn");
+
+    toggleBtns.forEach(btn => {
+
+    let content = btn.nextElementSibling.nextElementSibling;
+    
+    // Hide by default
+    content.style.display = "none";
+
+    btn.addEventListener("click", () => {
+        
+        btn.classList.toggle("active");
+        
+        if(btn.classList.contains("active")) {
+        btn.textContent = "-";
+        content.style.display = "block";
+        } else {
+        btn.textContent = "+";
+        content.style.display = "none"; 
+        }
+    });
+    });
+</script>

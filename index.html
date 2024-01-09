@@ -31,17 +31,56 @@
     }
     /* Additional styling */
     body {
+        font-size: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      margin: 0;
+    }
+    .font-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 30%;
+    }
+    .text-section {
       text-align: center;
-      font-size: 24px;
-      margin-top: 100px;
+      font-style: italic; /* Adding italic style */
+    }
+    .redirect-button {
+      margin-top: 20px;
+    }
+    .button-container {
+        width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0;
+      padding: 20px;
+    }
+    .button-container button {
+      margin-right: 20px;
     }
   </style>
 </head>
 <body>
-  <div id="changingText">Hello! Welcome to the journey of Adarsh</div>
-
-  <button class="redirect-button" onclick="enterToResume()">Go to Another Page</button>
-
+    <div class="font-container">
+        <div class="text-section" id="changingText">Welcome to the Resume of Adarsh Gadari</div>
+      </div>
+    
+      <div class="button-container">
+        <button class="summary-button" onclick="summaryPage()">Summary</button>
+        <button class="Experience-button" onclick="experiencePage()">Work Experience</button>
+        <button class="ResearchLabs-button" onclick="researchLabsPage()"> Research Labs</button>
+        <button class="Education-button" onclick="educationPage()"> Education </button>
+        <button class="programingSkills-button" onclick="programmingSKillsPage()"> Programming Languages</button>
+        <button class="AItools-button" onclick="AItoolsPage()"> AI tools and concepts</button>
+        <button class="techProficiency-button" onclick="techProficiencyPage()"> Technical Proficiency</button>
+        <button class="AchievementsAndVol-button" onclick="AchievementsPage()"> Achievements and Volunteering</button>
+      </div>
 
   <script>
     // Array of font classes
@@ -54,10 +93,44 @@
     }
 
     // Change font every 2 seconds
-    setInterval(changeFont, 2000);
+    const intervalId = setInterval(changeFont, 2000);
 
-    function enterToResume() {
-      window.location.assign('another_page.html');
+    // Redirect to another page function
+    function summaryPage() {
+      clearInterval(intervalId); // Stop font changing interval
+      window.location.assign('summary.html'); // Open another_page.html in the same tab
+    }
+
+    function experiencePage() {
+      clearInterval(intervalId); // Stop font changing interval
+      window.location.assign('workExperience.html'); // Open another_page.html in the same tab
+    }
+    function researchLabsPage() {
+      clearInterval(intervalId); // Stop font changing interval
+      window.location.assign('researchLabs.html'); // Open another_page.html in the same tab
+    }
+    
+    function educationPage() {
+      clearInterval(intervalId); // Stop font changing interval
+      window.location.assign('education.html'); // Open another_page.html in the same tab
+    }
+    function programmingSKillsPage() {
+      clearInterval(intervalId); // Stop font changing interval
+      window.location.assign('programmingSkills.html'); // Open another_page.html in the same tab
+    }
+    function AItoolsPage() {
+      clearInterval(intervalId); // Stop font changing interval
+      window.location.assign('AItools.html'); // Open another_page.html in the same tab
+    }
+    function techProficiencyPage() {
+      clearInterval(intervalId); // Stop font changing interval
+      window.location.assign('techProficiency.html'); // Open another_page.html in the same tab
+    }
+    function AchievementsPage() {
+      clearInterval(intervalId); // Stop font changing interval
+      window.location.assign('Achievements.html'); // Open another_page.html in the same tab
+    }
+
   </script>
 </body>
 </html>
