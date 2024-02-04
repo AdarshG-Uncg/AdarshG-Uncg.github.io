@@ -1,136 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Font Changing Greeting</title>
-  <style>
-    /* Define fonts with italic style */
-    .font1 {
-      font-family: Arial, sans-serif;
-      font-style: italic;
-    }
-    .font2 {
-      font-family: 'Times New Roman', serif;
-      font-style: italic;
-    }
-    .font3 {
-      font-family: 'Courier New', monospace;
-      font-style: italic;
-    }
-    .font4 {
-      font-family: 'Annai MN', sans-serif;
-      font-style: italic;
-    }
-    .font5 {
-      font-family: 'Matura MT Script Capitals', cursive;
-      font-style: italic;
-    }
-    .font6 {
-      font-family: 'LingWai SC', sans-serif;
-      font-style: italic;
-    }
-    /* Additional styling */
-    body {
-        font-size: 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      height: 100vh;
-      margin: 0;
-    }
-    .font-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 30%;
-    }
-    .text-section {
-      text-align: center;
-      font-style: italic; /* Adding italic style */
-    }
-    .redirect-button {
-      margin-top: 20px;
-    }
-    .button-container {
-        width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 0;
-      padding: 20px;
-    }
-    .button-container button {
-      margin-right: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Resume</title>
 </head>
 <body>
-    <div class="font-container">
-        <div class="text-section" id="changingText">Welcome to the Resume of Adarsh Gadari</div>
-      </div>
+
+<header>
+    <div id="photo">
+        <img src="./WhatsApp Image 2024-02-05 at 02.22.35_8a5135b3.jpg">
+    </div>
+    <div id="summary">
+        <h1>Adarsh Gadari</h1>
+        <h3>Ph.D.candidate</h3>
+        <p>Currently, I am a PhD student in computer science at University of North Carolina, Greensboro. My research focuses on
+            developing Artificial Intelligence (AI) algorithms. With an academic background of signal processing, communication and
+            electronics engineering, and a professional experience of 4 years (July 2018 - July 2022) in AI across domains like
+            engineering, medical images (Ophthalmology), medical structured data, health informatics, I would like to develop
+            algorithms that can be used for multiple applications. Current research includes parametrization of Ophthalmic images to
+            develop a machine learning algorithm for automated image registration.</p>
+    </div>
+</header>
+
+<div id="buttons">
+    <button onclick="showContent('work')">Work</button>
+    <button onclick="showContent('research')">Research</button>
+    <button onclick="showContent('education')">Education</button>
+    <button onclick="showContent('programming')">Programming Languages</button>
+    <button onclick="showContent('ai-concepts')">AI tools and concepts</button>
+    <button onclick="showContent('techProficiency')">Technical Proficiency</button>
+    <button onclick="showContent('achievements')">Achievements and Volunteering</button>
     
-      <div class="button-container">
-        <button class="summary-button" onclick="summaryPage()">Summary</button>
-        <button class="Experience-button" onclick="experiencePage()">Work Experience</button>
-        <button class="ResearchLabs-button" onclick="researchLabsPage()"> Research Labs</button>
-        <button class="Education-button" onclick="educationPage()"> Education </button>
-        <button class="programingSkills-button" onclick="programmingSKillsPage()"> Programming Languages</button>
-        <button class="AItools-button" onclick="AItoolsPage()"> AI tools and concepts</button>
-        <button class="techProficiency-button" onclick="techProficiencyPage()"> Technical Proficiency</button>
-        <button class="AchievementsAndVol-button" onclick="AchievementsPage()"> Achievements and Volunteering</button>
-      </div>
+</div>
 
-  <script>
-    // Array of font classes
-    const fonts = ['font1', 'font2', 'font3', 'font4', 'font5', 'font6'];
-    let currentFont = 0;
-
-    function changeFont() {
-      document.getElementById('changingText').className = fonts[currentFont];
-      currentFont = (currentFont + 1) % fonts.length;
-    }
-
-    // Change font every 2 seconds
-    const intervalId = setInterval(changeFont, 2000);
-
-    // Redirect to another page function
-    function summaryPage() {
-      clearInterval(intervalId); // Stop font changing interval
-      window.location.assign('summary.html'); // Open another_page.html in the same tab
-    }
-
-    function experiencePage() {
-      clearInterval(intervalId); // Stop font changing interval
-      window.location.assign('workExperience.html'); // Open another_page.html in the same tab
-    }
-    function researchLabsPage() {
-      clearInterval(intervalId); // Stop font changing interval
-      window.location.assign('researchLabs.html'); // Open another_page.html in the same tab
-    }
+<div id="content">
+    <div id="work">
+        <h2>Work Experience</h2>
+        <p></p>
+        <br>
+        
+    </div>
+    <div id="research">
+        <h2>Research Labs</h2>
+        <p>Association with research labs:</p>
+        <t>1. Immersive Multimedia Technology Lab - IIT Hyderabad, Prof. Soumya Jana</t> <br>
+        <t>2. Infinite Family of Feature Space Machine Leaning - UNC Greensboro, Prof. Shan Suthaharan </t> <br>
+        <t>3. Choroidal Analysis and Research Lab - Univeristy of Pittsburgh Medical College - Dr. Jay Chhablani, Dr. Kiran Kumar Vupparaboina </t>
+    </div>
     
-    function educationPage() {
-      clearInterval(intervalId); // Stop font changing interval
-      window.location.assign('education.html'); // Open another_page.html in the same tab
-    }
-    function programmingSKillsPage() {
-      clearInterval(intervalId); // Stop font changing interval
-      window.location.assign('programmingSkills.html'); // Open another_page.html in the same tab
-    }
-    function AItoolsPage() {
-      clearInterval(intervalId); // Stop font changing interval
-      window.location.assign('AItools.html'); // Open another_page.html in the same tab
-    }
-    function techProficiencyPage() {
-      clearInterval(intervalId); // Stop font changing interval
-      window.location.assign('techProficiency.html'); // Open another_page.html in the same tab
-    }
-    function AchievementsPage() {
-      clearInterval(intervalId); // Stop font changing interval
-      window.location.assign('Achievements.html'); // Open another_page.html in the same tab
-    }
+    <section id="education">
 
-  </script>
+        <h2>Education</h2>
+      
+        <div class="school">
+          <h3>University of North Carolina at Greensboro</h3>
+          <p>Doctor of Philosophy (Ph.D), 2022-present</p>
+          <p>Department of Computer Science.</p>
+          <p>Current research focuses on computational ophthalmology which includes 
+            parametrization, finding feature space, and Machine learning.</p>
+        </div>
+      
+        <div class="school">
+          <h3>Indian Institute of Technology Hyderabad</h3> 
+          <p>Master of Technology (M.Tech), 2016 - 2018</p>
+          <p>8.1/10 GPA</p>
+          <p>Communication and Signal Processing, Dept. of Electrical Engineering</p>
+        </div>
+      
+        <div class="school">
+          <h3>M.V.S.R Engineering College</h3>
+          <p>Bachelor of Engineering (B.E), 2011 - 2015</p>
+          <p>Electronics and Communication Engineering</p>
+        </div>
+      
+    </section>
+
+    <section id="programming">
+        <h2>Programming Skills</h2>
+      
+        
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg" width="10px"> 
+            Python
+            <br>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" width="10px">
+            C 
+            <br>
+          
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" width="10px">
+            C++
+            <br>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" width="10px">
+            Matlab
+      
+    </section>
+
+    <section id="ai-concepts">
+
+        <h2>Artificial Intelligence Concepts and Tools</h2>
+      
+        <ul class="skills-list">
+          <li>Deep Learning</li>
+          <li>Pretrained models</li>
+          <li>Residual Networks</li>
+          <li>Transformers</li>
+          <li>Attention mechanism</li>
+        </ul>
+      
+    </section>
+    <section id="techProficiency">
+
+        <h2>Technical Proficiency</h2>
+      
+        <ul class="skills-list">
+          <li>Deep Learning</li>
+          <li>Machine Learning</li>
+          <li>Artificial Intelligence</li>
+          <li>Image Processing/ Computer vision</li>
+          <li>Signal Processing</li>
+          <li>Natural Language Processing</li>
+          <li>Information Theroy</li>
+          <li>Probability and Random Process</li>
+
+        </ul>
+      
+    </section>
+
+    <section id="achievements">
+
+        <h2>Achievements</h2>
+      
+        <ul class="achievements-list">
+          <li><b>Consolation prize at Legato Techathon</b> for developing automatic sign language detection using AI</li>
+          <li><b>Recognized by the team at Legato</b> with for proactively proposing solutions to make tele-health AI powered</li>
+          <li><b>Submitted Abstract to ASCRS-2020 on IOL Power prediction</b>, Paper in preparation</li>
+          <li><b>Won best poster award</b> at Cornea conference, Kolkata -2019</li>
+          <li><b>GATE rank</b> 5620 of 172714</li>
+          <li><b>Voluntereed to</b> Integrated Household Survey conducted by the Government of Telangana</li>
+        </ul>
+      
+    </section>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initially hide all content sections within the #content div
+        var contentSections = document.querySelectorAll('#content > div, #content > section');
+        contentSections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+
+        // Show the initial buttons
+        document.getElementById('buttons').style.display = 'flex';
+    });
+
+    function showContent(contentId) {
+        // Hide all content divs and sections within the #content div
+        var contentSections = document.querySelectorAll('#content > div, #content > section');
+        contentSections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+
+        // Show the selected content
+        var selectedContent = document.getElementById(contentId);
+        if (selectedContent) {
+            selectedContent.style.display = 'block';
+        }
+    } 
+</script> 
+
+
 </body>
 </html>
