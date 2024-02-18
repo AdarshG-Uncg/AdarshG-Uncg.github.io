@@ -3,174 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-    <title>Resume</title>
+    <link rel="stylesheet" href=".\css\decorations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <title>adarsh resume</title>
+    
 </head>
+
 <body>
-
-<header>
+    <div class="flex-container">
     <div id="photo">
-        <img src="./WhatsApp Image 2024-02-05 at 02.22.35_8a5135b3.jpg">
+        <img src="images\picture.jpg">
     </div>
-    <div id="summary">
-        <h1>Adarsh Gadari</h1>
-        <h3>Ph.D.candidate</h3>
-        <p>Currently, I am a PhD student in computer science at University of North Carolina, Greensboro. My research focuses on
-            developing Artificial Intelligence (AI) algorithms. With an academic background of signal processing, communication and
-            electronics engineering, and a professional experience of 4 years (July 2018 - July 2022) in AI across domains like
-            engineering, medical images (Ophthalmology), medical structured data, health informatics, I would like to develop
-            algorithms that can be used for multiple applications. Current research includes parametrization of Ophthalmic images to
-            develop a machine learning algorithm for automated image registration.</p>
+    <div style='overflow:auto;' id="summary">
+            <h1>ADARSH <span id="surname">GADARI</span></h1>
+            <h2 style="color:#eb8f1e;">University of North Carolina Greensboro</h2>
+            <h4>Ph.D. Candidate: Computer Science Researcher</h4>
     </div>
-</header>
+    <div id="right-part">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/adarsh.0101?igsh=aDB4czV0dW1tdXZ2" class="fa fa-instagram"></a>
+            <a href="https://www.linkedin.com/in/adarsh-gadari" class="fa fa-linkedin"></a>
+            <a href="mailto:adarsh.gadari@gmail.com" class="fa fa-google"></a>
+            <a id="downloadLink" style="color:white" href="resume\resume.pdf" download="Adarsh_resume">Download</a>
+        </div>
+        <!-- <div id="download">
+            <a id="downloadLink" style="color:white" href="resume\resume.pdf" download="Adarsh_resume">Download</a>
+        </div> -->
+    </div>
+        <div id="logo">
+            <img src="images\bannerlogo" alt="" width="150px" heigth="150px">
+        </div> 
 
-<div id="buttons">
-    <button onclick="showContent('work')">Work</button>
-    <button onclick="showContent('research')">Research</button>
-    <button onclick="showContent('education')">Education</button>
-    <button onclick="showContent('programming')">Programming Languages</button>
-    <button onclick="showContent('ai-concepts')">AI tools and concepts</button>
-    <button onclick="showContent('techProficiency')">Technical Proficiency</button>
-    <button onclick="showContent('achievements')">Achievements and Volunteering</button>
     
-</div>
+    <!-- <div class="social-icons">
+        <a href="https://www.instagram.com/adarsh.0101?igsh=aDB4czV0dW1tdXZ2" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/adarsh-gadari" class="fa fa-linkedin"></a>
+        <a href="mailto:adarsh.gadari@gmail.com" class="fa fa-google"></a>
+    </div>
+    <div id="download">
+        <a id="downloadLink" style="color:white" href="resume\resume.pdf" download="Adarsh_resume">Download</a>
+    </div> -->
+    
+   
+    </div>
+    
+    <div id="layout-container">
+            <div id="layout-menu">
+                
+                <div class="menu-item"><a href="summary.html"  target="content-frame">Home</a></div>
+                <div class="menu-item"><a href="education.html" target="content-frame">Education</a></div>
+                <div class="menu-item"><a href="researchLabs.html" target="content-frame">Research Labs</a></div>
+                
+                <div class="menu-item "><a href="workExperience.html" target="content-frame">Experience</a></div>
+                
+                <div class="menu-item"><a href="techProficiency.html" target="content-frame">Tech Proficiency</a></div>
+                <div class="menu-item "><a href="programmingSkills.html" target="content-frame">Skills</a></div>
+                <div class="menu-item "><a href="AItools.html" target="content-frame">AI Tools</a></div>
+                
+                <div class="menu-item"><a href="publications.html" target="content-frame">Publications</a></div>
+                <div class="menu-item"><a href="Achievements.html" target="content-frame">Recongizations</a></div>
 
-<div id="content">
-    <div id="work">
-        <h2>Work Experience</h2>
-        <p></p>
-        <br>
+            </div>
+    </div>
+           
+        <div id="content-section">
+               
+                
+                <iframe id="content-frame" name="content-frame" src="summary.html"></iframe>
+        </div>
         
-    </div>
-    <div id="research">
-        <h2>Research Labs</h2>
-        <p>Association with research labs:</p>
-        <t>1. Immersive Multimedia Technology Lab - IIT Hyderabad, Prof. Soumya Jana</t> <br>
-        <t>2. Infinite Family of Feature Space Machine Leaning - UNC Greensboro, Prof. Shan Suthaharan </t> <br>
-        <t>3. Choroidal Analysis and Research Lab - Univeristy of Pittsburgh Medical College - Dr. Jay Chhablani, Dr. Kiran Kumar Vupparaboina </t>
-    </div>
-    
-    <section id="education">
-
-        <h2>Education</h2>
-      
-        <div class="school">
-          <h3>University of North Carolina at Greensboro</h3>
-          <p>Doctor of Philosophy (Ph.D), 2022-present</p>
-          <p>Department of Computer Science.</p>
-          <p>Current research focuses on computational ophthalmology which includes 
-            parametrization, finding feature space, and Machine learning.</p>
-        </div>
-      
-        <div class="school">
-          <h3>Indian Institute of Technology Hyderabad</h3> 
-          <p>Master of Technology (M.Tech), 2016 - 2018</p>
-          <p>8.1/10 GPA</p>
-          <p>Communication and Signal Processing, Dept. of Electrical Engineering</p>
-        </div>
-      
-        <div class="school">
-          <h3>M.V.S.R Engineering College</h3>
-          <p>Bachelor of Engineering (B.E), 2011 - 2015</p>
-          <p>Electronics and Communication Engineering</p>
-        </div>
-      
-    </section>
-
-    <section id="programming">
-        <h2>Programming Skills</h2>
-      
         
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg" width="10px"> 
-            Python
-            <br>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" width="10px">
-            C 
-            <br>
-          
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" width="10px">
-            C++
-            <br>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" width="10px">
-            Matlab
-      
-    </section>
+        
+        <footer id="footer">
+            Page generated by <span id="author-name">Maheshwari P</span> and <span id="author-name">Adarsh G</span></a>.
+        </footer>
+        <div id="font-buttons">
+            <button id="increase-font">A+</button>
+            <button id="decrease-font">A-</button>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const increaseButton = document.getElementById("increase-font");
+                const decreaseButton = document.getElementById("decrease-font");
+        
+                // Function to increase font size
+                increaseButton.addEventListener("click", function() {
+                    changeFontSize(2); // You can adjust the increment value here
+                });
+        
+                // Function to decrease font size
+                decreaseButton.addEventListener("click", function() {
+                    changeFontSize(-2); // You can adjust the decrement value here
+                });
+        
+                // Function to change font size
+                function changeFontSize(changeAmount) {
+                    const elementsToChange = document.querySelectorAll("h1, h2, h3, p, a");
+                    elementsToChange.forEach(function(element) {
+                        let currentSize = parseFloat(window.getComputedStyle(element).fontSize);
+                        element.style.fontSize = (currentSize + changeAmount) + "px";
+                    });
+                }
+            });
+            // Get all menu items except for the "Home" button
+    var menuItems = document.querySelectorAll('.menu-item:not(:first-child) a');
 
-    <section id="ai-concepts">
-
-        <h2>Artificial Intelligence Concepts and Tools</h2>
-      
-        <ul class="skills-list">
-          <li>Deep Learning</li>
-          <li>Pretrained models</li>
-          <li>Residual Networks</li>
-          <li>Transformers</li>
-          <li>Attention mechanism</li>
-        </ul>
-      
-    </section>
-    <section id="techProficiency">
-
-        <h2>Technical Proficiency</h2>
-      
-        <ul class="skills-list">
-          <li>Deep Learning</li>
-          <li>Machine Learning</li>
-          <li>Artificial Intelligence</li>
-          <li>Image Processing/ Computer vision</li>
-          <li>Signal Processing</li>
-          <li>Natural Language Processing</li>
-          <li>Information Theroy</li>
-          <li>Probability and Random Process</li>
-
-        </ul>
-      
-    </section>
-
-    <section id="achievements">
-
-        <h2>Achievements</h2>
-      
-        <ul class="achievements-list">
-          <li><b>Consolation prize at Legato Techathon</b> for developing automatic sign language detection using AI</li>
-          <li><b>Recognized by the team at Legato</b> with for proactively proposing solutions to make tele-health AI powered</li>
-          <li><b>Submitted Abstract to ASCRS-2020 on IOL Power prediction</b>, Paper in preparation</li>
-          <li><b>Won best poster award</b> at Cornea conference, Kolkata -2019</li>
-          <li><b>GATE rank</b> 5620 of 172714</li>
-          <li><b>Voluntereed to</b> Integrated Household Survey conducted by the Government of Telangana</li>
-        </ul>
-      
-    </section>
-    
-</div>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Initially hide all content sections within the #content div
-        var contentSections = document.querySelectorAll('#content > div, #content > section');
-        contentSections.forEach(function(section) {
-            section.style.display = 'none';
-        });
-
-        // Show the initial buttons
-        document.getElementById('buttons').style.display = 'flex';
+    // Add click event listeners to all menu items except "Summary"
+    menuItems.forEach(function(item) {
+      item.addEventListener('click', function() {
+        document.getElementById('footer').style.display = 'none';
+      });
     });
+   
+    document.getElementById('downloadLink').addEventListener('click', function(event) {
+        // Prevent the default behavior of the link (opening the file in the browser)
+        event.preventDefault();
+        
+        // Trigger the download by creating a new anchor element
+        var downloadAnchor = document.createElement('a');
+        downloadAnchor.href = this.getAttribute('href');
+        downloadAnchor.download = this.getAttribute('download');
+        
+        // Append the anchor element to the body and simulate a click event
+        document.body.appendChild(downloadAnchor);
+        downloadAnchor.click();
+        
+        // Remove the anchor element from the body
+        document.body.removeChild(downloadAnchor);
+    });     
+        </script>
+        
+        </body>
+        </html>
 
-    function showContent(contentId) {
-        // Hide all content divs and sections within the #content div
-        var contentSections = document.querySelectorAll('#content > div, #content > section');
-        contentSections.forEach(function(section) {
-            section.style.display = 'none';
-        });
-
-        // Show the selected content
-        var selectedContent = document.getElementById(contentId);
-        if (selectedContent) {
-            selectedContent.style.display = 'block';
-        }
-    } 
-</script> 
-
-
-</body>
-</html>
+ 
