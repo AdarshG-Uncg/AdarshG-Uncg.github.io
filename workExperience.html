@@ -1,62 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="./csss/decorations.css">
     <style>
-        .expandable .content {
-        display: none; 
+        body{
+            font-family: Georgia, serif;
         }
-        .expandable {
-        display: flex;
-        align-items: flex-start;
+        .experience-list li {
+        
+          margin-bottom: 10px;
         }
-
-        .expandable-content {
-        flex: 1; 
+        p{
+            font-weight: bold;
         }
-
-        .toggle-btn {
-        margin-right: 10px; 
+        h2, h3 {
+          border-bottom: 1px solid gray; /* Adjust thickness and color as needed */
+          margin-bottom: 10px; 
+          color: #020381;
         }
     </style>
 </head>
 <body>
-    <div class="expandable">
+      
+  <div class="experience">
+    <h2>Associate Software Engineer (10/2020 – 07/2022)</h2>
+    <p >Legato Health Technologies, Hyderabad</p>
+    <ul class="experience-list">
+        <li>
+            <i>Health Informatics:</i>
+            Exploratory and statistical data analysis on the legacy data to identify the high-risk groups. Hands-on with the on-premises data connection using Hadoop to retrieve data. Specifically, the focus was to reduce the dimensionality of the data by either creating latent variables or removing non-contributing variables.
+        </li>
+        <li>
+            <i>Return to Office - Tracking COVID Risk:</i>
+            Developed and deployed a solution to track the COVID cases across cities and states to evaluate the risk in returning to the office. Scheduled triggers to fetch data from government websites, developed the ARIMA model, and pushed predictions - the number of positive cases and number of deaths for the next 14 days.
+        </li>
+        <li>
+            <i>Ticket Bucketing Using Text Classification:</i>
+            Applied text preprocessing methods like word-to-vector conversion using Gensim library, Term Frequency-Inverse Document Frequency, etc., followed by machine learning models like support vector machines. Saved 100K USD worth of man-hours by classifying the tickets automatically.
+        </li>
+        <li>
+            <i>Prediction of Sepsis:</i>
+            Identifying the onset of sepsis at least 6 hours prior. Applied recurrent neural networks in combination with Long-Short Term Memory units on the time series natured data.
+        </li>
+        <li>
+            <i>Emotion Detection:</i>
+            Identifying the emotions from a face as a use case to drive tele-health by artificial intelligence. Developed a solution using convolutional neural networks.
+        </li>
+    </ul>
+    <div>
+      <h2> Research Intern (08/2019 – 09/2020)</h2>
+  <p>L.V. Prasad Eye Institute</p>
 
-        <button class="toggle-btn">+</button>
-      
-        <div class="expandable-content">
-      
-          <div class="title">Section Title</div>
-      
-          <div class="content">
-            The hidden content is here.
-          </div>
-      
-        </div>
-      
-      </div>
+    <ul class="experience-list">
+      <li>
+          <i>Introcular Lens(IOL) Power prediction:</i>
+          Preprocessing the huge biometry data, performed web-scraping to pull the IOL predictions of other formulas. Developed an AI regression model to predict the IOL power and corresponding post operative spherical equivalent refraction. Deployed in the LVPEI Intranet for further validation.
+      </li>
+      <li>
+          <i>OM 3.0, Pupil Detection:</i>
+          Developed an automated software to detect pupil from an Infra-Red image.
+      </li>
+      <li>
+          <i>Optical Character Recognition(OCR) for oculyzer images:</i>
+          Developed and trained an OCR to extract eye information from oculyzer images. Performed statistical analysis on the data.
+      </li>
+      <li>
+          <i>Extracting biometry information from A-scans:</i>
+          Extracted data from a set of 50,000 PDF files with different variations which include missing data, change in the format of the data, etc. Performed statistical analysis on the data and won the best poster award at comprehensive cataract conference, Kolkata 2019.
+      </li>
+  </ul>
+</div>
+  <h2>Data Scientist (07/2018 – 06/2019)</h2>
+  <p>Cyient Insights, Hyderabad</p>
+  
+  <ul class="experience-list">
+      <li>
+          Developed a classification model to predict the severity of a failed equipment.
+          Hands-on experience in creating a GUI in python. Conversion of R codes to python. Prepared dashboards in Tableau.
+      </li>
+  </ul>
+
+</div>
+
+</div>
+
 </body>
-<script>
-    const toggleBtns = document.querySelectorAll(".toggle-btn");
-
-    toggleBtns.forEach(btn => {
-
-    let content = btn.nextElementSibling.nextElementSibling;
-    
-    // Hide by default
-    content.style.display = "none";
-
-    btn.addEventListener("click", () => {
-        
-        btn.classList.toggle("active");
-        
-        if(btn.classList.contains("active")) {
-        btn.textContent = "-";
-        content.style.display = "block";
-        } else {
-        btn.textContent = "+";
-        content.style.display = "none"; 
-        }
-    });
-    });
-</script>
+</html>
